@@ -1,18 +1,7 @@
 import React, {createRef} from 'react';
 import classNames from 'classnames'
 import './style.css';
-interface IProps {
-	children: any,
-	width: number,
-	height: number
-}
-interface IState {
-	x: number
-	y: number
-	disX: number
-	disY: number,
-	cName: string
-}
+import {IProps, IState} from './interface'
 class TaskSpace extends React.Component<IProps, IState> {
 	refEle: React.RefObject<any>
 	flag: boolean = false
