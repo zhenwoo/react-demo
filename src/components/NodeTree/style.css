@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+li{
+    list-style: none;
+}
+.node-table{
+    display: table;
+}
+.node-cell{
+    display: table-cell;
+    padding: 0px 8px;
+    text-align: center;
+    position: relative;
+}
+.node-cell::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 0;
+    height: 1px;
+    background: #ccc;
+    top: -20px;
+}
+.node-cell::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 50%;
+    height: 1px;
+    background: #ccc;
+    top: -20px;
+}
+.node-cell:last-child::before{
+    background: none;
+}
+.node-cell:first-child::after{
+    background: none;
+}
+.node-text{
+    background: #fff;
+    border: 1px solid #ccc;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 85px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+.node-text::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -21px;
+    background: #ccc;
+}
+.node-text-fold::after{
+    content: '';
+    position: absolute;
+    height: 21px;
+    width: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -21px;
+    background: #ccc;
+}
+.node-btn{
+    width: 20px;
+    height: 20px;
+    display: block;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    position: absolute;
+    bottom: -42px;
+    left: 50%;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.tree-icon-close, .tree-icon-open {
+    height: 2px;
+    width: 12px;
+    background: #cccccc;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.tree-icon-open::before{
+    content: '';
+    height: 12px;
+    width: 2px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    background: #cccccc;
+    transform: translate(-50%, -50%);
+
+}
+.node-text-content{
+    cursor: pointer;
+    display: block;
+    padding: 8px 12px;
+}
+.node-text-content:hover{
+    background: mediumaquamarine;
+    color: #fff;
+}
+.node-btn-fold::after{
+    content: '';
+    height: 25px;
+    position: absolute;
+    width: 1px;
+    background: #ccc;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}

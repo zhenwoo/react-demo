@@ -1,0 +1,9 @@
+body, html,.App,.workspaces, #root {
+    height: 100%;
+    overflow: hidden;
+}
+.workspaces{
+    background: #f9f9f9;
+    overflow: hidden;
+    height: 600px;
+}
