@@ -1,7 +1,7 @@
 type numOrStr = string | number
 export interface Node {
 	id:numOrStr
-	pid: numOrStr,
+	pid: numOrStr
 	label: string
 	children?: Array<Node>
 

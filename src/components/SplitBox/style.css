@@ -1,3 +1,9 @@
 .split-wrapper{
-    height: 100px;
+    height: 100%;
+}
+.split-item-1 {
+    height: 100%;
+    float: left;
+    width: 200px;
+    background: blue;
 }

@@ -47,15 +47,26 @@ class App extends React.Component<any, any>{
     const {width, height} = this.state
     return (
       <div className="App">
-        <SplitBox lockY={true} lockX={false}></SplitBox>
-        <div className="workspaces" ref={this.wrapper}>
-          <TaskSpace width={width} height={height}>
-            <TreeNode
-              data={familyData}
-              onNodeContextMenu={this.handleOnNodeContextMenu.bind(this)}
-              onNodeSelected={this.handleOnNodeSelected.bind(this)}
-            />
-          </TaskSpace>
+        <div className="header"></div>
+        <div className="body">
+          <div className="nav">
+            
+          </div>
+          <div className="content">
+            <SplitBox model="h" width={350}>
+              <div>左侧</div>
+              <div className="workspaces" ref={this.wrapper}>
+                <TaskSpace width={width} height={height} padding={85}>
+                  <TreeNode
+                    data={familyData}
+                    onNodeContextMenu={this.handleOnNodeContextMenu.bind(this)}
+                    onNodeSelected={this.handleOnNodeSelected.bind(this)}
+                  />
+                </TaskSpace>
+              </div>
+            </SplitBox>
+            
+          </div>
         </div>
       </div>
     );

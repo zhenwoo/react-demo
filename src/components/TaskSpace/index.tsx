@@ -29,11 +29,11 @@ class TaskSpace extends React.Component<IProps, IState> {
 	}
 	handleWheel (e:React.WheelEvent) {
 		const pos = this.refEle.current.getBoundingClientRect();
-		const {height} = this.props
+		const { height, padding} = this.props
 		if (pos.height >= height) {
 			let y = this.state.y;
 			if (e.deltaY > 0) {
-				if (Math.abs(height + Math.abs(y)) > pos.height) return;
+				if (Math.abs(height + Math.abs(y)) > pos.height - padding) return;
 				y -= 10;
 			} else {
 				if (y >= 0) return;

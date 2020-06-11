@@ -7,3 +7,17 @@ body, html,.App,.workspaces, #root {
     overflow: hidden;
     height: 600px;
 }
+.header{
+    height: 70px;
+    background: #111;
+}
+.body{
+    height: calc(100% - 70px);
+    background: red;
+}
+.nav{
+    height: 100%;
+    float: left;
+    width: 70px;
+    background: #111;
+}
